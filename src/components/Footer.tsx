@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex items-center justify-center gap-4 mb-6">
           <Heart className="w-6 h-6 text-primary animate-pulse" fill="currentColor" />
           <p className="font-crimson text-3xl font-bold text-foreground">
-            23 de Dezembro de 2023
+            23 de Dezembro de 2022
           </p>
           <Heart className="w-6 h-6 text-primary animate-pulse" fill="currentColor" />
         </div>
