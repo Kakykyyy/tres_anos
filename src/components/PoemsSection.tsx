@@ -21,7 +21,7 @@ const PoemsSection = () => {
       title: "Sonhos Compartilhados",
       verses: [
         "Sonho com o dia em que teremos nosso jardim,",
-        "Dois ipês na entrada, amarelo e branco assim,",
+        "Dois ipês na entrada, amarelo e roxo assim,",
         "Carpas nadando no riacho cristalino,",
         "Uma ponte levando a nosso destino.",
         "",

@@ -7,7 +7,7 @@ const DreamHomeSection = () => {
     {
       icon: Trees,
       title: "Dois Ipês na Entrada",
-      description: "Um ipê amarelo e um branco dando as boas-vindas ao nosso lar",
+      description: "Um ipê amarelo e um roxo dando as boas-vindas ao nosso lar",
       color: "text-golden-yellow"
     },
     {
