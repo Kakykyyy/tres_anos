@@ -49,7 +49,7 @@ Ele foi desenvolvido com foco em **experiência do usuário, desempenho e escala
 
 1. **Clone o repositório**
 
-```bash
+``bash
 git clone https://github.com/Kakykyyy/tres_anos.git
 Entre na pasta
 
@@ -97,7 +97,8 @@ docker run ...	Executa container Docker
 💬 Comentários ou mural público
 
 📸 Demonstração
-<img width="1902" height="953" alt="image" src="https://github.com/user-attachments/assets/95d64e87-5f1a-476f-8e6b-1e8d1542f0e4" />
+<img width="1902" height="953" alt="image" src="https://github.com/user-attachments/assets/433baaaa-38e4-4daa-81a0-3dd16991b8f8" />
+
 
 
 🤝 Contribuindo
