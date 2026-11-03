@@ -1,115 +1,78 @@
-# 🎉 tres_anos
+<div align="center">
 
-📅 **Projeto:** Aplicação web comemorativa de 3 anos  
-🔗 **Deploy (produção):** https://tres-anos-mu.vercel.app  
-📦 **Tecnologias:** TypeScript, Vite, React (ou similar), Tailwind CSS, Supabase, Docker
+# Três Anos
 
----
+**Memórias e momentos em uma homenagem interativa**
 
-## 🚀 Sobre o Projeto
+![React](https://img.shields.io/badge/React-20232a?style=flat-square) ![TypeScript](https://img.shields.io/badge/TypeScript-20232a?style=flat-square) ![Vite](https://img.shields.io/badge/Vite-20232a?style=flat-square) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-20232a?style=flat-square) ![Express](https://img.shields.io/badge/Express-20232a?style=flat-square)
 
-Este projeto é uma **aplicação web comemorativa** criada para marcar **3 anos de uma data especial**, relacionamento, parceria ou marco importante. O app combina uma **interface interativa no frontend** com um **backend leve**, possivelmente usando Supabase para autenticação e/ou armazenamento de dados (como mensagens, fotos, votos, etc.).
+[Sobre](#sobre) · [Como executar](#como-executar) · [Documentação](DOCUMENTACAO.md)
 
-Ele foi desenvolvido com foco em **experiência do usuário, desempenho e escalabilidade**, usando ferramentas modernas como Vite, TypeScript, Tailwind CSS e integração com serviços de backend.
+</div>
 
 ---
 
-## 📁 Estrutura do Repositório
+## Sobre
 
-/
-├── .github/workflows/ # Workflows de CI/CD (GitHub Actions)
-├── backend/ # Backend (API ou lógica customizada)
-├── public/ # Arquivos estáticos (HTML, imagens, favicon, etc.)
-├── src/ # Código principal da aplicação (UI)
-├── supabase/ # Configurações e funções do Supabase
-├── Dockerfile # Configuração para containerização
-├── .env # Variáveis de ambiente (não comitado)
-├── vite.config.ts # Configuração do Vite
-├── tsconfig.json # Configuração TS
-├── package.json # Scripts e dependências
-└── ...
+Site comemorativo que reúne fotos, poemas, música e um contador de tempo para celebrar uma história. O repositório inclui também uma API independente para armazenar mensagens.
 
+## Destaques
 
----
+- Contador comemorativo e seções personalizadas.
+- Galeria com ampliação de fotos.
+- Poemas, conteúdo visual e player musical.
+- API de mensagens com validação e persistência JSON.
 
-## 🛠️ Tecnologias e Ferramentas
+## Como executar
 
-| Tipo                      | Ferramenta / Lib                                               |
-|---------------------------|----------------------------------------------------------------|
-| Frontend                  | TypeScript, React (ou framework similar), Vite                 |
-| Estilização               | Tailwind CSS                                                   |
-| Backend / BaaS            | Supabase                                                      |
-| Containerização           | Docker                                                        |
-| Deploy                    | Vercel                                                        |
-| Integração contínua       | GitHub Actions                                                |
+Clone o repositório:
 
----
-
-## 💻 Como Rodar Localmente
-
-1. **Clone o repositório**
-
-``bash
+```sh
 git clone https://github.com/Kakykyyy/tres_anos.git
-Entre na pasta
-
 cd tres_anos
-Instale as dependências
+```
 
+Utilize Node.js e npm compatíveis com as dependências do projeto. A API de mensagens é executada separadamente do frontend.
+
+```sh
 npm install
-# ou
-yarn install
-Copie variáveis de ambiente
-
-Crie um arquivo .env com as variáveis de ambiente necessárias (por exemplo, chaves do Supabase). Algo assim:
-
-VITE_SUPABASE_URL=xxxxx
-VITE_SUPABASE_ANON_KEY=xxxxx
-⚠️ Essas chaves normalmente estão no diretório supabase/.
-
-Inicie a aplicação
-
 npm run dev
-Abra no navegador
+```
 
-➡️ Acesse: http://localhost:5173 (ou porta configurada no Vite)
+Acesse [a aplicação local](http://localhost:8080).
 
-📦 Scripts Comuns
-Comando	Descrição
-npm run dev	Inicia o ambiente de desenvolvimento
-npm run build	Gera o build de produção
-npm run preview	Visualiza o build de produção local
-docker build ...	Build de container Docker
-docker run ...	Executa container Docker
-📌 Possíveis Funcionalidades
-✨ A depender da intenção do projeto, ele pode incluir:
+## Organização
 
-🎂 Página comemorativa com conteúdo visual e interativo
+```text
+src/
+├── components/    # Seções e interações
+├── assets/        # Fotos e recursos visuais
+└── integrations/  # Cliente Supabase
+backend/src/       # API de mensagens
+supabase/          # Configuração
+```
 
-❤️ Mensagens personalizadas
+## Personalização
 
-📸 Galeria de fotos
+Atualize imagens e legendas em `src/components/PhotoGallery.tsx` e os arquivos em `src/assets/`. Os componentes de contador, poemas e música concentram os demais conteúdos da homenagem.
 
-🗳️ Formulários para enviar votos/mensagens
+## Backend e configuração
 
-🔐 Login via Supabase
+A API oferece `GET /api/health`, `GET /api/messages` e `POST /api/messages`. Para executá-la junto ao frontend, configure uma porta diferente de 8080. O guia técnico traz os comandos, o formato das mensagens e as variáveis do cliente Supabase.
 
-💬 Comentários ou mural público
+## Comandos do frontend
 
-📸 Demonstração
-<img width="1902" height="953" alt="image" src="https://github.com/user-attachments/assets/433baaaa-38e4-4daa-81a0-3dd16991b8f8" />
+| Comando | Finalidade |
+|---|---|
+| `npm run dev` | Desenvolvimento |
+| `npm run build` | Gerar `dist/` |
+| `npm run preview` | Visualizar o build |
+| `npm run lint` | Analisar o código |
 
+## Documentação técnica
 
+O [guia técnico](DOCUMENTACAO.md) reúne configuração, comportamento dos dados, limitações conhecidas e verificações manuais. As instruções foram elaboradas a partir da leitura do código; a execução dos projetos não foi validada nesta revisão.
 
-🤝 Contribuindo
-Contribuições são bem-vindas! Siga estes passos:
+## Autor
 
-Faça um fork 🎯
-
-Crie uma branch: git checkout -b minha-contribuição 🔀
-
-Faça commit: git commit -m "feat: descrição" 💡
-
-Envie para a sua branch git push origin minha-contribuição 🚀
-
-Abra um PR para revisão 🧠
+Desenvolvido por [Kayky Erick · @Kakykyyy](https://github.com/Kakykyyy).
